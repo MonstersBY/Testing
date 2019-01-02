@@ -32,6 +32,21 @@ public class HomePage {
 //    FlightStatus
     @FindBy(xpath = "/html/body/div[4]/div/div/div[2]/div[2]/div/div/div[2]/div/div/div/input")
     private WebElement butSearchInfo;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[1]/div[1]/dl[2]/dd/div/span")
+    private WebElement toAirop;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[4]/div/div/div[2]/ul/li[3]")
+    private WebElement choseOsaka;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[5]/div/p[2]/a")
+    private WebElement closeDate;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[1]/div[2]/dl[3]/dd/dl/dd/ul/li[3]")
+    private WebElement clickAddAdult;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[1]/div[2]/dl[3]/dd/div[1]/div/span")
+    private WebElement addChildren;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[1]/div[2]/dl[3]/dd/div[2]/dl[1]/dd/ul/li[3]")
+    private WebElement clickChildren;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[2]/div[2]/ul/li/div")
+    private WebElement butSearch;
+
 
 //        HomePageAction
     public void inputNormSearch(String new_name) {
@@ -58,5 +73,26 @@ public class HomePage {
     }
     public void inButSearchInfo(){
         butSearchInfo.click();
+    }
+
+    public void AddAir(){
+        toAirop.click();
+        choseOsaka.click();
+        closeDate.click();
+    }
+
+    public void inClickAddAdult(int i){
+        for (int j=0; i>j;j++) {
+            clickAddAdult.click();
+        }
+    }
+    public void inClickAddChildren(int i){
+        addChildren.click();
+        for (int j=0; i>j;j++) {
+            clickChildren.click();
+        }
+    }
+    public void inButSearch(){
+        butSearch.click();
     }
 }

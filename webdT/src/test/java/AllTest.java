@@ -65,6 +65,15 @@ public class AllTest {
         iPage.inFirstJanuary();
     }
 
+    @Test
+    public void TestPeople(){
+        hPage.startHome();
+        hPage.AddAir();
+        hPage.inClickAddAdult(2);
+        hPage.inClickAddChildren(4);
+        hPage.inButSearch();
+    }
+
 
 
     @AfterClass
