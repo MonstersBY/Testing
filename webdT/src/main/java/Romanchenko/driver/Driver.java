@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private static final String WEBDRIVER_FIREDRIVER = "webdriver.gecko.driver";
-    private static final String WEBDRIVER_FIREDRIVER_PATH = "C:\\geckodriver\\geckodriver.exe";
+    private static final String WEBDRIVER_FIREDRIVER_PATH = "sourse/geckodriver.exe";
     private static WebDriver driver;
 
     private Driver(){}
