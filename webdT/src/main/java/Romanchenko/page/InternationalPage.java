@@ -1,12 +1,17 @@
 package Romanchenko.page;
 
 import Romanchenko.driver.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InternationalPage {
     WebDriver driver;
@@ -51,13 +56,19 @@ public class InternationalPage {
     private WebElement clickAddAdult;
     @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form/div[1]/dl[3]/dd/div[2]/dl[1]/dd/ul/li[3]")
     private WebElement clickChildren;
-
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[2]/div[3]/div/div/section[2]/div/div/div/div/div[2]/ul[1]/li[1]/a")
+    private WebElement TheFlightStatusOfCodeshareFlightsOperatedByOtherAirlines;
+    @FindBy(name = "departureAirPort_widget")
+    private WebElement Dep;
+    @FindBy(name = "arrivalAirPort_widget")
+    private WebElement Arr;
+    @FindBy(xpath = "//*[@id=\"routeEn_0\"]")
+    private WebElement searchByOtherAir;
 
     public void inFromCity(String new_name) {
         ClearFromCity.click();
         fromCity.sendKeys(new_name);
     }
-
     public void inToCity(String new_name) {
         toCity.sendKeys(new_name);
     }
@@ -105,6 +116,19 @@ public class InternationalPage {
         for (int j=0; i>j;j++) {
             clickChildren.click();
         }
+    }
+
+    public void butOperByOtherAir(){
+        TheFlightStatusOfCodeshareFlightsOperatedByOtherAirlines.click();
+    }
+    public void inDep(String new_name) {
+        Dep.sendKeys(new_name);
+    }
+    public void inArr(String new_name) {
+        Arr.sendKeys(new_name);
+    }
+    public void butSearchByOtherAir(){
+        searchByOtherAir.click();
     }
 
 

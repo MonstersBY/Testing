@@ -97,9 +97,16 @@ public class AllTest {
         hPage.addName("Алексей");
         hPage.addSearchManageReservationsPurchase();
     }
-    //
 
-
+    @Test
+    public void FlightStationOperatedByOtherAirlines(){
+        iPage.startInternation();
+        iPage.butOperByOtherAir();
+        iPage.inDep("London(LGW)  (LGW)");
+        iPage.inArr("San Francisco  (SFO)");
+        iPage.butSearchByOtherAir();
+    }
+    
 
     @AfterClass
     public static void tearDown() {

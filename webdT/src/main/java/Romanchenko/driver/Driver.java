@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
-import java.util.concurrent.TimeUnit;
-
 public class Driver {
     private static final String WEBDRIVER_FIREDRIVER = "webdriver.gecko.driver";
     private static final String WEBDRIVER_FIREDRIVER_PATH = "sourse/geckodriver.exe";
