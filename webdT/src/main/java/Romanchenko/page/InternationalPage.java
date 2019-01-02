@@ -45,6 +45,12 @@ public class InternationalPage {
     private WebElement exitDate;
     @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[5]/div/p[2]/a")
     private WebElement exiteDateMoscow;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form/div[1]/ul[1]/li[2]/label")
+    private WebElement oneWay;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form/div[1]/dl[3]/dd/dl/dd/ul/li[3]")
+    private WebElement clickAddAdult;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form/div[1]/dl[3]/dd/div[2]/dl[1]/dd/ul/li[3]")
+    private WebElement clickChildren;
 
 
     public void inFromCity(String new_name) {
@@ -84,6 +90,21 @@ public class InternationalPage {
     }
     public void inExiteDateMoscow(){
         exiteDateMoscow.click();
+    }
+
+    public void clickeOneWay(){
+        oneWay.click();
+    }
+
+    public void inClickAddAdult(int i){
+        for (int j=0; i>j;j++) {
+            clickAddAdult.click();
+        }
+    }
+    public void inClickAddChildren(int i){
+        for (int j=0; i>j;j++) {
+            clickChildren.click();
+        }
     }
 
 

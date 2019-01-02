@@ -74,6 +74,18 @@ public class AllTest {
         hPage.inButSearch();
     }
 
+    @Test
+    public void FliThreeAdultTwoChildren(){
+        iPage.startInternation();
+        iPage.clickeOneWay();
+        iPage.inToCity("Moscow(DME)[DME]");
+        iPage.toMoscowDME();
+        iPage.inExiteDateMoscow();
+        iPage.inClickAddAdult(2);
+        iPage.inClickAddChildren(2);
+        iPage.inSearcbutFly();
+    }
+
 
 
     @AfterClass

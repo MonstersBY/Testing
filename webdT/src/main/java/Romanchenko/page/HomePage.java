@@ -48,6 +48,7 @@ public class HomePage {
     private WebElement butSearch;
 
 
+
 //        HomePageAction
     public void inputNormSearch(String new_name) {
         normalSearch.clear();
