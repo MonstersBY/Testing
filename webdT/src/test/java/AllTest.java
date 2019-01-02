@@ -97,6 +97,7 @@ public class AllTest {
         hPage.addName("Алексей");
         hPage.addSearchManageReservationsPurchase();
     }
+    //
 
 
 
