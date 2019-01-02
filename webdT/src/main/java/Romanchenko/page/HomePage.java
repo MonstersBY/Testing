@@ -18,6 +18,9 @@ public class HomePage {
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
     }
+    public static void startHome() {
+        Driver.getDriver().get("https://www.ana.co.jp/en/jp/");
+    }
 
 //    HomePage
     @FindBy(id = "search")

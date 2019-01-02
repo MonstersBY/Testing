@@ -5,13 +5,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class InternationalPage {
     WebDriver driver;
+    private WebDriverWait wait;
 
     public InternationalPage() {
         driver = Driver.getDriver();
         PageFactory.initElements(driver, this);
+    }
+    public static void startInternation() {
+        Driver.getDriver().get("https://www.ana.co.jp/en/jp/international/");
     }
 
     //  Internation
@@ -63,6 +69,7 @@ public class InternationalPage {
         toDate.click();
     }
     public void inFirstJanuary(){
+//        wait.until(ExpectedConditions.elementToBeClickable(firstJanuary)).click();
         firstJanuary.click();
     }
 
