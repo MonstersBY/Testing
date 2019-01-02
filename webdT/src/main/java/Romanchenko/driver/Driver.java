@@ -2,6 +2,7 @@ package Romanchenko.driver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,7 +16,9 @@ public class Driver {
     public static WebDriver getDriver() {
         if (driver == null) {
             System.setProperty(WEBDRIVER_FIREDRIVER, WEBDRIVER_FIREDRIVER_PATH);
-            driver=new FirefoxDriver();
+            FirefoxOptions options = new FirefoxOptions();
+            options.addArguments("--headless");
+            driver=new FirefoxDriver(options);
         }
         return driver;
     }
