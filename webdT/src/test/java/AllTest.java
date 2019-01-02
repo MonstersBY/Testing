@@ -86,6 +86,18 @@ public class AllTest {
         iPage.inSearcbutFly();
     }
 
+    @Test
+    public void EnterNameSurnameRu(){
+        hPage.startHome();
+        hPage.butManageReservationsPurchase();
+        hPage.addDepartureDate();
+        hPage.addFlightNumber("1234");
+        hPage.addReservationNumber("5254");
+        hPage.addLastName("Романченко");
+        hPage.addName("Алексей");
+        hPage.addSearchManageReservationsPurchase();
+    }
+
 
 
     @AfterClass

@@ -46,10 +46,26 @@ public class HomePage {
     private WebElement clickChildren;
     @FindBy(xpath = "/html/body/div[6]/div[1]/div[1]/div[1]/div/div/div/form[1]/div[2]/div[2]/ul/li/div")
     private WebElement butSearch;
+    @FindBy(xpath = "/html/body/div[6]/div[1]/div[2]/div[3]/div/div/section[1]/div[1]/div/div/div[1]/ul/li[1]/a")
+    private WebElement ManageReservationsPurchase;
+    @FindBy(xpath = "//*[@id=\"reserveEmbarkationDay\"]")
+    private WebElement DepartureDate;
+    @FindBy(xpath = "/html/body/div[8]/div/div/div/div/div[2]/table/tbody/tr[3]/td[5]")
+    private WebElement shichijinanaDate;
+    @FindBy(xpath = "//*[@id=\"reserveFlightNumber\"]")
+    private WebElement FlightNumber;
+    @FindBy(xpath = "//*[@id=\"reserveNumber\"]")
+    private WebElement ReservationNumber;
+    @FindBy(xpath = "//*[@id=\"reserveLastName\"]")
+    private WebElement LastName;
+    @FindBy(xpath = "//*[@id=\"reserveFirstName\"]")
+    private WebElement Name;
+    @FindBy(xpath = "/html/body/div[5]/div/div[2]/form/div[2]/div/div/p[1]/input")
+    private WebElement SearchManageReservationsPurchase;
 
 
 
-//        HomePageAction
+    //        HomePageAction
     public void inputNormSearch(String new_name) {
         normalSearch.clear();
         normalSearch.sendKeys(new_name);
@@ -95,5 +111,28 @@ public class HomePage {
     }
     public void inButSearch(){
         butSearch.click();
+    }
+
+    public void butManageReservationsPurchase(){
+        ManageReservationsPurchase.click();
+    }
+    public void addDepartureDate(){
+        DepartureDate.click();
+        shichijinanaDate.click();
+    }
+    public void addFlightNumber(String new_name){
+        FlightNumber.sendKeys(new_name);
+    }
+    public void addReservationNumber(String new_name){
+        ReservationNumber.sendKeys(new_name);
+    }
+    public void addLastName(String new_name){
+        LastName.sendKeys(new_name);
+    }
+    public void addName(String new_name){
+        Name.sendKeys(new_name);
+    }
+    public void addSearchManageReservationsPurchase(){
+        SearchManageReservationsPurchase.click();
     }
 }
