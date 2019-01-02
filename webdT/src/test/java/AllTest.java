@@ -1,6 +1,8 @@
 import Romanchenko.driver.Driver;
 import Romanchenko.page.HomePage;
 import Romanchenko.page.InternationalPage;
+import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.NoSuchElementException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
@@ -44,7 +46,8 @@ public class AllTest {
         iPage.inToCity("Grodno");
         iPage.inSearchFly();
     }
-    @Test
+
+    @Test(expectedExceptions = ElementNotInteractableException.class)
     public void TwoSity(){
         iPage.startInternation();
         iPage.inFromCity("Moscow(DME)[DME]");
@@ -55,12 +58,13 @@ public class AllTest {
         iPage.inSearcbutFly();
     }
 
-    @Test
+    @Test(expectedExceptions = NoSuchElementException.class)
     public void PasteTime(){
         iPage.startInternation();
         iPage.inFromDate();
         iPage.inFirstJanuary();
     }
+
 
 
     @AfterClass
